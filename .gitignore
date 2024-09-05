@@ -1,2 +1,10 @@
-*.DS_Store
-/build
+*.*
+*
+!*/
+!/src/*
+!Makefile
+!README.md
+!.gitignore
+!.vscode/*
+.vscode/.cache/
+!.clang-format
