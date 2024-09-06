@@ -8,3 +8,4 @@
 !.vscode/*
 .vscode/.cache/
 !.clang-format
+!.clangd

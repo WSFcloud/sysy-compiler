@@ -1,0 +1,59 @@
+[
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-I/home/compiler/src",
+            "-I/home/compiler/build",
+            "-Wall",
+            "-Wno-register",
+            "-std=c++17",
+            "-g",
+            "-O0",
+            "-I/opt/include",
+            "-o",
+            "/home/compiler/build/main.cpp.o",
+            "src/main.cpp"
+        ],
+        "directory": "/home/compiler",
+        "file": "src/main.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-I/home/compiler/src",
+            "-I/home/compiler/build",
+            "-Wall",
+            "-Wno-register",
+            "-std=c++17",
+            "-g",
+            "-O0",
+            "-I/opt/include",
+            "-o",
+            "/home/compiler/build/sysy.tab.cpp.o",
+            "build/sysy.tab.cpp"
+        ],
+        "directory": "/home/compiler",
+        "file": "build/sysy.tab.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-I/home/compiler/src",
+            "-I/home/compiler/build",
+            "-Wall",
+            "-Wno-register",
+            "-std=c++17",
+            "-g",
+            "-O0",
+            "-I/opt/include",
+            "-o",
+            "/home/compiler/build/sysy.lex.cpp.o",
+            "build/sysy.lex.cpp"
+        ],
+        "directory": "/home/compiler",
+        "file": "build/sysy.lex.cpp"
+    }
+]
