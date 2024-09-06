@@ -2,6 +2,7 @@
 *
 !*/
 !/src/*
+!/test/*
 !Makefile
 !README.md
 !.gitignore
