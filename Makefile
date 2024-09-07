@@ -37,6 +37,7 @@ BISON := bison
 TOP_DIR := $(shell pwd)
 TARGET_EXEC := compiler
 SRC_DIR := $(TOP_DIR)/src
+TEST_DIR := $(TOP_DIR)/test
 BUILD_DIR ?= $(TOP_DIR)/build
 LIB_DIR ?= $(CDE_LIBRARY_PATH)/native
 INC_DIR ?= $(CDE_INCLUDE_PATH)
@@ -95,9 +96,18 @@ $(BUILD_DIR)/%.tab$(FB_EXT): $(SRC_DIR)/%.y
 	$(BISON) $(BFLAGS) -o $@ $<
 
 
-.PHONY: clean
+.PHONY: clean run
 
 clean:
 	-rm -rf $(BUILD_DIR)
+
+# Test files
+ktest ?= hello
+TEST_FILE = $(TEST_DIR)/$(ktest).c
+TEST_OUT_FILE = $(ktest).koopa
+
+run: $(BUILD_DIR)/$(TARGET_EXEC)
+	@echo "Running $(TARGET_EXEC) with file $(TEST_FILE)"
+	$(BUILD_DIR)/$(TARGET_EXEC) -koopa $(TEST_FILE) -o $(TEST_OUT_FILE)
 
 -include $(DEPS)
